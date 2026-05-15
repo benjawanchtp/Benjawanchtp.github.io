@@ -1,0 +1,108 @@
+ .minimal-skills-section {
+            padding: 90px 20px;
+            max-width: 900px; /* บีบความกว้างให้พอดีสายตา อ่านง่ายขึ้น */
+            margin: 0 auto;
+        }
+
+        .skills-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 40px; /* ระยะห่างระหว่างแต่ละหมวดหมู่ */
+        }
+
+        .skill-category {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* ระยะห่างระหว่างชื่อหมวดและป้าย Tag */
+        }
+
+        .skill-category-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-color);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-left: 3px solid var(--primary-color); /* เส้นสีน้ำตาลเอิร์ธโทนด้านซ้าย */
+            padding-left: 12px;
+            margin: 0;
+        }
+
+        .skill-tags-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background: #FFFFFF; /* พื้นหลังสีขาวคลีนๆ */
+            color: var(--text-color);
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 400;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+
+
+
+        /* -------------------------------------------
+           สไตล์สำหรับ Soft Skills (จัดกึ่งกลาง & ขอบมนกลม)
+           ------------------------------------------- */
+        .soft-skills-wrapper {
+            display: flex;
+            justify-content: center; /* ดันเนื้อหาทั้งหมดให้อยู่กึ่งกลางแนวนอน */
+            align-items: center;
+            flex-wrap: wrap; /* ถ้ายาวเกินกรอบให้ปัดตกบรรทัดใหม่ */
+            gap: 15px; /* ระยะห่างระหว่างป้าย */
+            max-width: 800px;
+            margin: 0 auto; /* จัดให้ตัวกล่องห่อหุ้มอยู่กึ่งกลางหน้าจอ */
+        }
+
+        .soft-skill-tag {
+            background: #FFFFFF;
+            color: var(--text-color);
+            padding: 10px 22px;
+            border-radius: 6px; /* ปรับขอบให้โค้งมนแบบแคปซูล */
+            font-size: 0.95rem;
+            font-weight: 400;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02); /* ใส่เงาบางๆ ให้ดูมีมิติ */
+        }
+
+
+        /* -------------------------------------------
+           สไตล์สำหรับการแบ่งครึ่งหน้าจอ (Split Skills Layout)
+           ------------------------------------------- */
+        .skills-split-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* แบ่งครึ่งหน้าจอ 50:50 */
+            gap: 60px; /* ระยะห่างระหว่างฝั่งซ้ายและขวา */
+            margin-top: 30px;
+        }
+
+        .column-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ปรับให้ Soft Skills เรียงชิดซ้ายให้สวยงามเมื่ออยู่ในคอลัมน์ */
+        .soft-skills-wrapper.align-left {
+            justify-content: flex-start;
+        }
+
+        /* Responsive: ถ้าหน้าจอเล็กกว่า 768px (มือถือ/แท็บเล็ต) ให้กลับมาเรียงแถวเดียว */
+        @media (max-width: 768px) {
+            .skills-split-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }

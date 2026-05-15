@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjawan Chompootepa - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('index.css');
+        @import url('project.css');
+        @import url('skill.css');
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home" class="logo">Portfolio</a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Hi, I'm BENJAWAN CHOMPOOTΕΡΑ</h1>
+        <h2 id="typing-text"></h2>
+        <p>Computer Science graduate with a strong foundation in Artificial Intelligence, Machine Learning, and NLP. Passionate about deploying AI solutions that solve real-world problems</p>
+        <div style="display: flex; gap: 15px; justify-content: center;">
+            <a href="#projects" class="btn">Explore My Work</a>
+            <a href="Resume_Benjawan Chompootepa.pdf" download class="btn" style="background-color: var(--primary-color);">
+        Download Resume
+    </a>
+            <a href="#contact" class="btn" style="background: transparent; border: 1px solid var(--text-color); color: var(--text-color);">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h3 class="section-title">About Me</h3>
+        <div class="card">
+            <p style="margin-bottom: 25px; color: var(--text-light);">
+                At <strong>Tohoku University</strong>, I proved my problem-solving skills by boosting Deep Learning accuracy to <strong>98.77%</strong>. Exploring <strong>LLM Robustness</strong> instilled in me a deep commitment to 'Data Quality' and precision, 
+                which remain my core standards for all future developments.
+            </p>
+            
+            <h4 style="border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 20px;">Education</h4>
+            <div style="margin-bottom: 20px; margin-top: 20px;">
+                <h5 style="font-size: 1.05rem; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">
+                    Bachelor's Degree in Computer Science, Faculty of Science
+                </h5>
+                <p style="color: var(--text-light); font-style: italic; font-size: 0.95rem; margin: 0;">
+                    Naresuan University, Phitsanulok | Jun 2022 - Apr 2026 | GPA: 3.25
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h3 class="section-title">Work Experience</h3>
+        <div class="card">
+            <h4>Research Intern</h4>
+            <p style="color: var(--secondary-color); font-weight: 500; margin-bottom: 20px;">
+                Advanced Institute of So-Go-Chi Informatics (RIEC), Tohoku University, Japan | Nov 2025 - Feb 2026
+            </p>
+            <ul style="color: var(--text-color); padding-left: 20px;">
+                <strong style="color: var(--text-color); display: block; margin-top: 15px; margin-bottom: 10px;">Focus 1: NLP & AI Model Development</strong>
+                    <li style="color: var(--text-light); margin-bottom: 8px;">Developed ABSA models (BERT, RoBERTa, BART, T5), boosting accuracy from 88.60% to <span class="highlight">98.77%</span> via ETL & data denoising.</li>
+                    <li style="color: var(--text-light); margin-bottom: 8px;">Architected a Multi-task Learning pipeline with <span class="highlight">T5-base</span> for simultaneous sentiment & topic extraction.</li>
+                    <li style="color: var(--text-light); margin-bottom: 8px;">Optimized with Optuna + K-Fold validation, achieving a consistent <span class="highlight">F1-score of 97%</span>.</li>
+                <br>
+                <strong style="color: var(--text-color); display: block; margin-bottom: 10px;">Focus 2: LLM Robustness & Trustworthy AI</strong> 
+                    <li style="color: var(--text-light); margin-bottom: 8px;">Evaluated In-context Learning (ICL) in DeepSeek, Gemma, and QWQ, identifying robustness gaps in negation tasks.</li>
+                    <li style="color: var(--text-light); margin-bottom: 8px;">Benchmarked with MMT4NL framework; discovered <span class="highlight">QWQ (32B) achieved 91.2% fairness accuracy</span>, outperforming GPT-4o (84%) and Gemini-2.0 Flash (86%).</li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        
+        <a class="prev-slide">&#10094;</a>
+        <a class="next-slide">&#10095;</a>
+        
+        <img class="modal-content" id="expandedImg">
+    </div>
+
+    <section id="projects" class="modern-projects-section">
+        <h3 class="section-title">Key Projects</h3>
+        
+        <div class="project-glass-card">
+            <div class="info-box">
+                <div class="project-title">CARETH+ (Health Consultation Chatbot)</div>
+                <div class="project-desc">
+                    Cross-platform mobile application (Android) for preliminary health consultation, developed with Flutter
+                    <br>
+                    <br>
+                    <li><strong>System Architecture:</strong> Utilized Generative AI for real-time Thai-to-English translation to interface with the Infermedica API, and fetched patient profiles from Firebase.</li>
+                    <li><strong>Key Features:</strong> Built a Smart Risk Triage system to recommend self-care and OTC medication for low-risk cases, and integrated OpenStreetMap/Google Maps routing for emergency hospital navigation.</li>
+
+                </div>
+            </div>
+
+            <div class="image-gallery">
+                <img src="careth_signup.png" alt="Careth 1" class="gallery-img">
+                <img src="careth_chat.png" alt="Careth 2" class="gallery-img">
+                <img src="careth_map.png" alt="Careth 3" class="gallery-img">
+                <img src="careth_firebase.png" alt="Careth 4" class="gallery-img">
+            </div>
+
+            <div class="tech-stack-box">
+                <div class="stack-label">Tech Stack</div>
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">Generative AI</span>
+                <span class="tech-badge">Infermedica API</span>
+                <span class="tech-badge">Firebase</span>
+                <span class="tech-badge">OpenStreetMap</span>
+                <span class="tech-badge">Google Maps API</span>
+            </div>
+        </div>
+
+        <div class="project-glass-card">
+            <div class="info-box">
+                <div class="project-title">AI Travel Planner Web Application</div>
+                <div class="project-desc">
+                    Web application generating personalized Isan Province travel itineraries based on destination, experience type, duration, and budget
+                    <br>
+                    <br>
+                    <li><strong>System Architecture:</strong> Designed a 3-Model AI Pipeline utilizing DeepSeek-R1 and Distill-Llama-70B to generate Thai itinerary packages, and Gemma-2-9B-it to craft English image prompts.</li>
+                    <li><strong>Key Features:</strong> Generates photorealistic destination visuals using Stable Diffusion 3.5-Large-Turbo.
+                </div>
+            </div>
+
+            <div class="image-gallery">
+                <img src="ai_workflow.jpg" alt="Travel 1" class="gallery-img">
+                <img src="ai1.png" alt="Travel 2" class="gallery-img">
+                <img src="ai2.jpg" alt="Travel 3" class="gallery-img">
+                <img src="ai3.jpg" alt="Travel 4" class="gallery-img">
+                <img src="ai4.jpg" alt="Travel 5" class="gallery-img">
+            </div>
+
+            <div class="tech-stack-box">
+                <div class="stack-label">Tech Stack</div>
+                <span class="tech-badge">Python (Streamlit)</span>
+                <span class="tech-badge">DeepSeek-R1</span>
+                <span class="tech-badge">Distill-Llama-70B</span>
+                <span class="tech-badge">Gemma-2-9B</span>
+                <span class="tech-badge">Stable Diffusion 3.5-Large-Turbo</span>
+            </div>
+        </div>
+
+        <div class="project-glass-card">
+            <div class="info-box">
+                <div class="project-title">Student Job Matching Web Application for CSIT Students</div>
+                <div class="project-desc">
+                    Full-stack web platform for CSIT department recruitment at Naresuan University
+                    <br>
+                    <br>
+                    <li><strong>System Architecture:</strong> Built a secure Instructor Admin Panel for full CRUD operations on job postings (student quota, deadlines, category).</li>
+                    <li><strong>Key Features:</strong> Provided a Student Portal where users can browse, view details, apply through a matching interface, and track application status.
+                </div>
+            </div>
+
+            <div class="image-gallery">
+                <img src="csit_main.jpg" alt="Job 1" class="gallery-img">
+                <img src="csit_1.jpg" alt="Job 2" class="gallery-img">
+                <img src="csit_2.jpg" alt="Job 3" class="gallery-img">
+                <img src="csit_3.jpg" alt="Job 4" class="gallery-img">
+                <img src="csit_4.jpg" alt="Job 5" class="gallery-img">
+                <img src="csit_dashbord.jpg" alt="Job 6" class="gallery-img">
+                <img src="csit_dashbord2.jpg" alt="Job 7" class="gallery-img">
+            </div>
+
+            <div class="tech-stack-box">
+                <div class="stack-label">Tech Stack</div>
+                <span class="tech-badge">HTML/CSS</span>
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">MySQL</span>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="skills" class="minimal-skills-section" style="max-width: 1100px;">
+        <h3 class="section-title">Skills & Expertise</h3>
+        
+        <div class="skills-split-container">
+            
+            <div class="skills-column">
+                <h4 class="column-title">Technical Skills</h4>
+                <div class="skills-wrapper">
+                    
+                    <div class="skill-category">
+                        <h5 class="skill-category-title">AI & Machine Learning</h5>
+                        <div class="skill-tags-group">
+                            <span class="skill-tag">LLMs (OpenAI, Gemini, Claude)</span>
+                            <span class="skill-tag">NLP (BERT, RoBERTa, BART, T5)</span>
+                            <span class="skill-tag">Prompt Engineering</span>
+                            <span class="skill-tag">ETL Pipeline</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h5 class="skill-category-title">Programming</h5>
+                        <div class="skill-tags-group">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">HTML5 / CSS3</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h5 class="skill-category-title">Frameworks & Libraries</h5>
+                        <div class="skill-tags-group">
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Streamlit</span>
+                            <span class="skill-tag">Node.js</span>                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h5 class="skill-category-title">Tools & Database</h5>
+                        <div class="skill-tags-group">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Jenkins</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Ollama</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="skills-column">
+                <h4 class="column-title">Soft Skills</h4>
+                <div class="soft-skills-wrapper align-left">
+                    <span class="soft-skill-tag">Adaptability</span>
+                    <span class="soft-skill-tag">Analytical Thinking</span>
+                    <span class="soft-skill-tag">Effective Communication</span>
+                    <span class="soft-skill-tag">Problem-Solving</span>
+                    <span class="soft-skill-tag">Growth Mindset & Self-Learning</span>
+                    <span class="soft-skill-tag">Time Management</span>
+                    <span class="soft-skill-tag">Teamwork & Collaboration</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+
+    <footer id="contact">
+        <h3 class="section-title" style="font-size: 2rem; margin-bottom: 10px;">Contact</h3>
+        <br>
+        <p style="color: var(--text-light); margin-bottom: 30px;">Open to full-time opportunities in Software Engineering, AI/ML, and Full-Stack Development</p>
+        <div class="contact-info">
+            <p><a href="mailto:benjawanchtp@gmail.com" class="contact-link">📧</a> benjawanchtp@gmail.com</p>
+            <p><a href="tel:0809439899" class="contact-link">📱</a> 080-9439899</p>
+            <p><a href="https://github.com/benjawanchtp" class="contact-link">💻</a> github.com/benjawanchtp</p>
+            <p>📍 Lampang, Thailand</p>
+        </div>
+        <p style="color: var(--text-light); margin-top: 30px; font-size: 0.9rem;"></p>
+    </footer>
+
+    <script>
+        const text = "AI & Machine Learning Engineer";
+        let index = 0;
+        const speed = 80; 
+        const element = document.getElementById("typing-text");
+
+        function typeWriter() {
+            if (index < text.length) {
+                element.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        
+        window.onload = typeWriter;
+    </script>
+
+    <script>
+        // ระบบคลิกเพื่อขยายรูปภาพและสไลด์ (แยกเฉพาะแต่ละโปรเจกต์)
+        const modal = document.getElementById("imageModal");
+        const expandedImg = document.getElementById("expandedImg");
+        const closeModal = document.querySelector(".close-modal");
+        const prevBtn = document.querySelector(".prev-slide");
+        const nextBtn = document.querySelector(".next-slide");
+
+        // ตัวแปรเก็บกลุ่มรูปภาพของ "โปรเจกต์ปัจจุบัน" ที่กำลังคลิกดู
+        let currentImageGroup = [];
+        let currentIndex = 0;
+
+        // 1. ดึงรูปภาพทั้งหมดมาเพื่อรอรับคำสั่งคลิก
+        const allGalleryImages = document.querySelectorAll(".gallery-img");
+
+        allGalleryImages.forEach(img => {
+            // กรองเอาเฉพาะรูปภาพ (IMG) เท่านั้น เผื่อในอนาคตมีแท็ก Video
+            if (img.tagName !== 'IMG') return;
+
+            img.addEventListener("click", function() {
+                // หา "กล่องบรรจุรูปภาพ (image-gallery)" ที่รูปนี้สังกัดอยู่
+                const parentGallery = this.closest('.image-gallery');
+                
+                // ดึงเฉพาะรูปภาพทั้งหมดที่อยู่ในโปรเจกต์นี้มาเก็บไว้
+                currentImageGroup = Array.from(parentGallery.querySelectorAll(".gallery-img")).filter(el => el.tagName === 'IMG');
+                
+                // หาว่ารูปที่เราคลิก เป็นรูปที่เท่าไหร่ในโปรเจกต์นี้
+                currentIndex = currentImageGroup.indexOf(this);
+
+                // เปิดหน้าต่าง Modal และแสดงรูป
+                modal.style.display = "block";
+                expandedImg.src = this.src;
+            });
+        });
+
+        // 2. ฟังก์ชันเปลี่ยนรูป (เดินหน้า-ถอยหลัง) ในวงเขตโปรเจกต์
+        function changeSlide(step) {
+            // ป้องกัน Error กรณีไม่มีรูปในกลุ่ม
+            if (currentImageGroup.length === 0) return;
+
+            currentIndex += step;
+            
+            // ถ้ารูปเลยรูปสุดท้าย ให้วนกลับมารูปแรกของโปรเจกต์นี้
+            if (currentIndex >= currentImageGroup.length) {
+                currentIndex = 0;
+            } 
+            // ถ้าถอยหลังเกินรูปแรก ให้วนไปรูปสุดท้ายของโปรเจกต์นี้
+            else if (currentIndex < 0) {
+                currentIndex = currentImageGroup.length - 1;
+            }
+            
+            // อัปเดตรูปใหม่ที่แสดง
+            expandedImg.src = currentImageGroup[currentIndex].src;
+        }
+
+        // 3. สั่งงานปุ่มลูกศรซ้าย-ขวา
+        prevBtn.addEventListener("click", function(e) {
+            e.stopPropagation(); // ป้องกันการคลิกทะลุไปปิด Modal
+            changeSlide(-1);
+        });
+
+        nextBtn.addEventListener("click", function(e) {
+            e.stopPropagation(); 
+            changeSlide(1);
+        });
+
+        // 4. ปิดหน้าต่างเมื่อกดปุ่ม X
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // 5. ปิดเมื่อคลิกพื้นที่ดำๆ รอบรูป
+        modal.onclick = function(event) {
+            // ปิดก็ต่อเมื่อไม่ได้คลิกโดนรูป และ ไม่ได้คลิกโดนปุ่มลูกศร
+            if (event.target !== expandedImg && event.target !== prevBtn && event.target !== nextBtn) {
+                modal.style.display = "none";
+            }
+        }
+
+        // 6. รองรับการกดปุ่มลูกศรบนคีย์บอร์ดให้เลื่อนรูปได้
+        document.addEventListener("keydown", function(event) {
+            if (modal.style.display === "block") {
+                if (event.key === "ArrowLeft") {
+                    changeSlide(-1);
+                } else if (event.key === "ArrowRight") {
+                    changeSlide(1);
+                } else if (event.key === "Escape") {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    </Script>
+</body>
+</html>
