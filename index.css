@@ -347,3 +347,40 @@
                 padding: 12px 15px;
             }
         }
+
+
+        /* ---------------------------------------------------
+   ตั้งค่าพิเศษสำหรับการสั่ง Print หรือเซฟเป็น PDF
+--------------------------------------------------- */
+@media print {
+    /* เปลี่ยนจากแถบเลื่อน ให้กลายเป็นการห่อบรรทัด (Wrap) ลงมา */
+    .image-gallery {
+        display: flex !important;
+        flex-wrap: wrap !important; /* ถ้ารูปเกินหน้ากระดาษ ให้ปัดลงบรรทัดใหม่ */
+        overflow: visible !important; /* ปิดการซ่อนรูป (เอาแถบเลื่อนออก) */
+        gap: 15px !important;
+    }
+
+    .gallery-img {
+        /* ปรับขนาดรูปให้เล็กลงนิดหน่อยเพื่อให้พอดีหน้ากระดาษ PDF */
+        flex: 0 0 calc(50% - 15px) !important; /* จัดให้เรียง 2 รูปต่อ 1 แถว */
+        height: 180px !important;
+        object-fit: cover !important;
+        box-shadow: none !important; /* ปิดเงาเพื่อความสะอาดของ PDF */
+    }
+
+    /* ซ่อนปุ่มลูกศรเลื่อนรูป (เพราะใน PDF เรากดเลื่อนไม่ได้) */
+    .prev-slide, .next-slide {
+        display: none !important;
+    }
+
+    /* ซ่อนปุ่มดาวน์โหลดเรซูเม่ (เพราะตัวมันเองกำลังจะเป็น PDF แล้ว) */
+    .btn {
+        display: none !important;
+    }
+
+    /* ปรับสีพื้นหลังเป็นสีขาวล้วนเพื่อประหยัดหมึกและดูเป็นทางการ */
+    body {
+        background-color: #ffffff !important;
+    }
+}
